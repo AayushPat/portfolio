@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Patel Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <!-- Brown Rectangle Box -->
+        <div class="brown-box">
+            <div class="title">
+                <p class="p1">port</p>
+                <p class="p2">folio</p>
+                <div class="mask"></div>
+                <p class="p3"></p>
+                <p class="p4"></p>
+            </div>
+            <div class="sub-title">
+                <p class="p5">Aayush Patel</p>
+            </div>
+        </div>
+
+        <!-- Grayish Rectangle with Headshot and Buttons -->
+        <div class="gray-box">
+            <div class="buttons">
+                <button class="button about">About Me</button>
+                <button class="button projects">Projects</button>
+                <button class="button contact">Contact</button>
+                <button class="button resume">Resume</button>
+            </div>
+            <img src="self-port2.png" alt="My Headshot" class="headshot">
+        </div>
+
+        <!-- Cream Color Box to be revealed on scroll -->
+        <div class="cream-box">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I'm Aayush Patel, a computer science major at James Madison
+                    University with a minor in Economics, combining tech skills
+                    with a broader view on how technology shapes our world. 
+                    I'm curious about the possibilities in artificial intelligence
+                    and excited to keep exploring the field. Outside of class, 
+                    I play soccer and tennis, where I enjoy the focus and strategy they bring.
+                    Growing up in Roanoke, Virginia, I've spent countless hours hiking in
+                    the Blue Ridge Mountains, picking up resilience and adaptability—qualities
+                    I bring to every project I take on.</p>
+                <h2>Projects</h2>
+
+                <!-- Image buttons for projects -->
+                <div class="button-container">
+                    <img src="list-image.png" alt="google list img" class="button-img" onclick="showProjectModal('google calander img')">
+                    <img src="websit.png" alt="website img" class="button-img" onclick="showProjectModal('website img')">
+                    <img src="project3.png" alt="Project 3" class="button-img" onclick="showProjectModal('project3')">
+                </div>
+            </div>
+        </div>
+        <!-- Modals for projects -->
+        <div id="project1-modal" class="modal">
+            <div class="modal-content" onmousedown="startDrag(event, 'project1-modal')">
+                <span class="close" onclick="closeModal('project1')">&times;</span>
+                <h2>Canvas to Google calendar</h2>
+                <p>The GCalendar Integration project automates syncing assignments from a learning 
+                    management system to Google Calendar. This Python script fetches assignment data 
+                    for multiple courses and adds it to Google Calendar, helping students stay on 
+                    top of deadlines.</p>
+                <a href="https://github.com/AayushPat/gcalander" target="_blank">View repository</a>
+            </div>
+        </div>
+
+        <div id="project2-modal" class="modal">
+            <div class="modal-content" onmousedown="startDrag(event, 'project2-modal')">
+                <span class="close" onclick="closeModal('project2')">&times;</span>
+                <h2>Project 2</h2>
+                <p>Description for Project 2. This is a sample project showcasing skills in back-end development.</p>
+                <a href="https://example.com/project2" target="_blank">View Project 2</a>
+            </div>
+        </div>
+
+        <div id="project3-modal" class="modal">
+            <div class="modal-content" onmousedown="startDrag(event, 'project3-modal')">
+                <span class="close" onclick="closeModal('project3')">&times;</span>
+                <h2>Project 3</h2>
+                <p>Description for Project 3. This is a sample project showcasing skills in full-stack development.</p>
+                <a href="https://example.com/project3" target="_blank">View Project 3</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
